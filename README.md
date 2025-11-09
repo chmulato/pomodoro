@@ -1,11 +1,21 @@
 # 🍅 Pomodoro Timer / Cronômetro Pomodoro
 
-🇧🇷 **Português** | 🇮🇹 **Italiano**
+<p align="center">
+  <img src="img/icon_brazil.png" alt="Brasil" width="48" height="48" />
+  <strong>Português</strong>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <img src="img/icon_italy.png" alt="Itália" width="48" height="48" />
+  <strong>Italiano</strong>
+</p>
 
-Aplicativo de gerenciamento de tempo baseado na Técnica Pomodoro.  
-Applicazione per la gestione del tempo basata sulla Tecnica Pomodoro.
+<p align="center">
+  Aplicativo de gerenciamento de tempo baseado na Técnica Pomodoro.<br>
+  Applicazione per la gestione del tempo basata sulla Tecnica Pomodoro.
+</p>
 
-![Tela Inicial](img/tela_inicial.png)
+<p align="center">
+  <img src="img/tela_inicial.png" alt="Tela Inicial" width="500" />
+</p>
 
 ---
 
