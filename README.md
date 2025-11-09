@@ -80,23 +80,31 @@ Il Pomodoro Timer è uno strumento per aumentare la produttività attraverso la 
 ### Método 1: Executar com Python / Metodo 1: Eseguire con Python
 
 **Português:**
+
 1. Clone ou baixe este repositório
 2. Instale as dependências:
+
 ```bash
 pip install -r requirements.txt
 ```
+
 3. Execute o aplicativo:
+
 ```bash
 python pomodoro.py
 ```
 
 **Italiano:**
+
 1. Clona o scarica questo repository
 2. Installa le dipendenze:
+
 ```bash
 pip install -r requirements.txt
 ```
+
 3. Esegui l'applicazione:
+
 ```bash
 python pomodoro.py
 ```
@@ -113,22 +121,26 @@ Execute o arquivo / Esegui il file `scripts\executar_pomodoro.bat` com duplo cli
 
 **Português:**  
 Execute o script de compilação:
+
 ```bash
 python scripts\pomodoro_exe.py
 ```
 
 Ou use o arquivo batch:
+
 ```bash
 scripts\compilar_pomodoro.bat
 ```
 
 **Italiano:**  
 Esegui lo script di compilazione:
+
 ```bash
 python scripts\pomodoro_exe.py
 ```
 
 O usa il file batch:
+
 ```bash
 scripts\compilar_pomodoro.bat
 ```
@@ -136,11 +148,13 @@ scripts\compilar_pomodoro.bat
 ### Compilação Manual / Compilazione Manuale
 
 1. Instale PyInstaller / Installa PyInstaller:
+
 ```bash
 pip install pyinstaller
 ```
 
 2. Compile o executável / Compila l'eseguibile:
+
 ```bash
 pyinstaller --onefile --windowed --name pomodoro --icon img\pomodoro.ico pomodoro.py
 ```
@@ -164,6 +178,7 @@ pyinstaller --onefile --windowed --name pomodoro --icon img\pomodoro.ico pomodor
 A Técnica Pomodoro foi criada por Francesco Cirillo no final dos anos 1980. O nome vem do timer de cozinha em forma de tomate (pomodoro em italiano) que Cirillo usava quando era estudante universitário.
 
 **Como funciona:**
+
 1. Escolha uma tarefa
 2. Configure o timer para 25 minutos (1 Pomodoro)
 3. Trabalhe na tarefa até o timer tocar
@@ -171,6 +186,7 @@ A Técnica Pomodoro foi criada por Francesco Cirillo no final dos anos 1980. O n
 5. A cada 4 Pomodoros, faça uma pausa longa de 30 minutos
 
 **Benefícios:**
+
 - Melhora o foco e concentração
 - Reduz a procrastinação
 - Aumenta a produtividade
@@ -182,6 +198,7 @@ A Técnica Pomodoro foi criada por Francesco Cirillo no final dos anos 1980. O n
 La Tecnica Pomodoro è stata creata da Francesco Cirillo alla fine degli anni '80. Il nome deriva dal timer da cucina a forma di pomodoro che Cirillo usava quando era studente universitario.
 
 **Come funziona:**
+
 1. Scegli un compito
 2. Imposta il timer per 25 minuti (1 Pomodoro)
 3. Lavora sul compito fino a quando il timer suona
@@ -189,6 +206,7 @@ La Tecnica Pomodoro è stata creata da Francesco Cirillo alla fine degli anni '8
 5. Ogni 4 Pomodori, fai una pausa lunga di 30 minuti
 
 **Benefici:**
+
 - Migliora la concentrazione e l'attenzione
 - Riduce la procrastinazione
 - Aumenta la produttività
@@ -199,7 +217,7 @@ La Tecnica Pomodoro è stata creata da Francesco Cirillo alla fine degli anni '8
 
 ## Estrutura de Arquivos / Struttura dei File
 
-```
+```text
 workspace_pomodoro/
 ├── pomodoro.py              # Aplicativo principal / Applicazione principale
 ├── requirements.txt         # Dependências Python / Dipendenze Python
@@ -238,6 +256,7 @@ workspace_pomodoro/
 ### Português
 
 Todas as sessões são registradas no arquivo `pomodoro_log.txt` com as seguintes informações:
+
 - Data e hora de início
 - Tipo de ciclo (Trabalho, Pausa Curta, Pausa Longa)
 - Duração do ciclo
@@ -247,6 +266,7 @@ Todas as sessões são registradas no arquivo `pomodoro_log.txt` com as seguinte
 ### Italiano
 
 Tutte le sessioni sono registrate nel file `pomodoro_log.txt` con le seguenti informazioni:
+
 - Data e ora di inizio
 - Tipo di ciclo (Lavoro, Pausa Breve, Pausa Lunga)
 - Durata del ciclo
@@ -262,6 +282,7 @@ Tutte le sessioni sono registrate nel file `pomodoro_log.txt` con le seguenti in
 O projeto inclui uma suíte completa de testes:
 
 **Testes Unitários:**
+
 - Validação de tempos (25/5/30 minutos)
 - Lógica de ciclos (4 pomodoros → pausa longa)
 - Formatação de tempo (MM:SS)
@@ -269,6 +290,7 @@ O projeto inclui uma suíte completa de testes:
 - Sistema de logging
 
 **Testes E2E:**
+
 - Interface gráfica
 - Animações GIF
 - Notificações sonoras
@@ -276,6 +298,7 @@ O projeto inclui uma suíte completa de testes:
 - Versão de teste rápido (5s/3s/10s)
 
 Para executar os testes:
+
 ```bash
 python testes\test_timer_logic.py
 ```
@@ -285,6 +308,7 @@ python testes\test_timer_logic.py
 Il progetto include una suite completa di test:
 
 **Test Unitari:**
+
 - Validazione dei tempi (25/5/30 minuti)
 - Logica dei cicli (4 pomodori → pausa lunga)
 - Formattazione del tempo (MM:SS)
@@ -292,6 +316,7 @@ Il progetto include una suite completa di test:
 - Sistema di logging
 
 **Test E2E:**
+
 - Interfaccia grafica
 - Animazioni GIF
 - Notifiche sonore
@@ -299,6 +324,7 @@ Il progetto include una suite completa di test:
 - Versione test rapido (5s/3s/10s)
 
 Per eseguire i test:
+
 ```bash
 python testes\test_timer_logic.py
 ```
@@ -310,30 +336,36 @@ python testes\test_timer_logic.py
 ### Português
 
 **Problema: Animação não aparece**
+
 - Verifique se o arquivo `img\pomodoro.gif` existe
 - Certifique-se de que a biblioteca Pillow está instalada: `pip install Pillow`
 
 **Problema: Executável não abre**
+
 - Execute como administrador
 - Verifique se o Windows Defender não bloqueou o arquivo
 - Recompile o executável usando `scripts\pomodoro_exe.py`
 
 **Problema: Ícone não aparece**
+
 - Verifique se o arquivo `img\pomodoro.ico` existe
 - Recompile o executável especificando o caminho do ícone
 
 ### Italiano
 
 **Problema: L'animazione non appare**
+
 - Verifica che il file `img\pomodoro.gif` esista
 - Assicurati che la libreria Pillow sia installata: `pip install Pillow`
 
 **Problema: L'eseguibile non si apre**
+
 - Esegui come amministratore
 - Verifica che Windows Defender non abbia bloccato il file
 - Ricompila l'eseguibile usando `scripts\pomodoro_exe.py`
 
 **Problema: L'icona non appare**
+
 - Verifica che il file `img\pomodoro.ico` esista
 - Ricompila l'eseguibile specificando il percorso dell'icona
 
@@ -346,11 +378,13 @@ python testes\test_timer_logic.py
 Os assets visuais podem ser regenerados usando os scripts na pasta `scripts/`:
 
 **Gerar GIFs e ícones:**
+
 ```bash
 python scripts\gerar_assets.py
 ```
 
 **Gerar bandeiras:**
+
 ```bash
 node scripts\gerar_bandeiras.js
 ```
@@ -360,11 +394,13 @@ node scripts\gerar_bandeiras.js
 Gli asset visivi possono essere rigenerati usando gli script nella cartella `scripts/`:
 
 **Generare GIF e icone:**
+
 ```bash
 python scripts\gerar_assets.py
 ```
 
 **Generare bandiere:**
+
 ```bash
 node scripts\gerar_bandeiras.js
 ```
@@ -403,8 +439,8 @@ SOFTWARE.
 Campo Largo, PR - Brasil  
 Data: 09 de Novembro de 2025
 
-GitHub: https://github.com/chmulato  
-Repositório: https://github.com/chmulato/pomodoro
+GitHub: [https://github.com/chmulato]  
+Repositório: [https://github.com/chmulato/pomodoro]
 
 ---
 
@@ -427,6 +463,7 @@ Ringraziamenti speciali a Francesco Cirillo per aver creato la Tecnica Pomodoro 
 ### Changelog
 
 **v1.0.0 (09/11/2025)**
+
 - Implementação inicial do Pomodoro Timer
 - Interface gráfica bilíngue (PT/IT)
 - Animações GIF para trabalho, pausa curta e pausa longa
