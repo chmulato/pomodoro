@@ -59,7 +59,7 @@ class PomodoroTimer:
         
         # Tenta definir o ícone
         try:
-            self.root.iconbitmap("pomodoro.ico")
+            self.root.iconbitmap("img/pomodoro.ico")
         except:
             pass
         
@@ -85,14 +85,14 @@ class PomodoroTimer:
     def load_gif_animation(self):
         """Carrega frames do GIF animado"""
         try:
-            gif = Image.open("pomodoro.gif")
+            gif = Image.open("img/pomodoro.gif")
             for frame in range(0, getattr(gif, "n_frames", 1)):
                 gif.seek(frame)
                 frame_image = gif.copy().resize((150, 150), Image.Resampling.LANCZOS)
                 photo = ImageTk.PhotoImage(frame_image)
                 self.frames.append(photo)
         except Exception as e:
-            print(f"Erro ao carregar pomodoro.gif: {e}")
+            print(f"Erro ao carregar img/pomodoro.gif: {e}")
             self.frames = []
     
     def setup_ui(self):

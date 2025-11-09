@@ -38,6 +38,10 @@ echo.
 REM Executa o aplicativo
 echo Iniciando aplicativo / Avvio dell'applicazione...
 echo.
+
+REM Muda para o diretório do script e depois para a raiz do projeto
+cd /d "%~dp0"
+cd ..
 python pomodoro.py
 
 if errorlevel 1 (

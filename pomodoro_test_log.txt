@@ -1,0 +1,13 @@
+=== POMODORO TIMER - LOG DE TESTES ===
+Iniciado em: 2025-11-09 11:34:20
+
+[2025-11-09 11:34:21] 🧪 TESTE INICIADO - Tempos reduzidos: 5s trabalho, 3s pausa curta, 10s pausa longa
+[2025-11-09 11:46:32] 🧪 TESTE INICIADO - Tempos reduzidos: 5s trabalho, 3s pausa curta, 10s pausa longa
+[2025-11-09 11:46:40] ▶️ Timer INICIADO
+[2025-11-09 11:46:45] ✅ POMODORO COMPLETO! (#1)
+[2025-11-09 11:46:47] ☕ Iniciando PAUSA CURTA (3s) - 1/4
+[2025-11-09 11:47:11] 🧪 TESTE INICIADO - Tempos reduzidos: 5s trabalho, 3s pausa curta, 10s pausa longa
+[2025-11-09 11:47:54] 🧪 TESTE INICIADO - Tempos reduzidos: 5s trabalho, 3s pausa curta, 10s pausa longa
+[2025-11-09 11:48:00] ▶️ Timer INICIADO
+[2025-11-09 11:48:05] ✅ POMODORO COMPLETO! (#1)
+[2025-11-09 11:48:08] ☕ Iniciando PAUSA CURTA (3s) - 1/4

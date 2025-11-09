@@ -37,9 +37,9 @@ def check_pyinstaller():
 def check_files():
     """Verifica arquivos necessários"""
     required_files = [
-        "pomodoro.py",
-        "pomodoro.ico",
-        "pomodoro.gif"
+        "../pomodoro.py",
+        "../img/pomodoro.ico",
+        "../img/pomodoro.gif"
     ]
     
     missing_files = []
@@ -63,14 +63,18 @@ def compile_exe():
     print("Iniciando compilação...")
     print()
     
+    # Muda para o diretório raiz do projeto
+    os.chdir("..")
+    
     # Comando PyInstaller
     cmd = [
         "pyinstaller",
         "--onefile",
         "--windowed",
         "--name", "pomodoro",
-        "--icon", "pomodoro.ico",
-        "--add-data", "pomodoro.gif;.",
+        "--icon", "img/pomodoro.ico",
+        "--add-data", "img/pomodoro.gif;img",
+        "--add-data", "img/pomodoro.ico;img",
         "--clean",
         "pomodoro.py"
     ]
@@ -90,14 +94,14 @@ def copy_resources():
     print()
     print("Copiando recursos para dist/...")
     
-    resources = ["pomodoro.gif", "pomodoro.ico"]
+    resources = ["img/pomodoro.gif", "img/pomodoro.ico"]
     
-    if not os.path.exists("dist"):
-        os.makedirs("dist")
+    if not os.path.exists("dist/img"):
+        os.makedirs("dist/img")
     
     for resource in resources:
         if os.path.exists(resource):
-            shutil.copy2(resource, "dist/")
+            shutil.copy2(resource, "dist/img/")
             print(f"✓ {resource} copiado")
     
     print()
@@ -135,11 +139,11 @@ def show_result():
         size = os.path.getsize("dist/pomodoro.exe") / (1024 * 1024)
         print(f"  ✓ dist/pomodoro.exe ({size:.2f} MB)")
     
-    if os.path.exists("dist/pomodoro.gif"):
-        print(f"  ✓ dist/pomodoro.gif")
+    if os.path.exists("dist/img/pomodoro.gif"):
+        print(f"  ✓ dist/img/pomodoro.gif")
     
-    if os.path.exists("dist/pomodoro.ico"):
-        print(f"  ✓ dist/pomodoro.ico")
+    if os.path.exists("dist/img/pomodoro.ico"):
+        print(f"  ✓ dist/img/pomodoro.ico")
     
     print()
     print("Para distribuir / Per distribuire:")
