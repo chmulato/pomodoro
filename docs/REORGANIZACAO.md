@@ -162,7 +162,7 @@ python pomodoro.py
 
 ### README.md
 
-- Removidos todos os emojis (🍅, 📖, ✨, etc.)
+- Removidos todos os emojis (ex.: ícones e marcadores visuais)
 - Mantidas apenas as imagens de bandeiras
 - Atualizadas todas as referencias para caminhos de scripts
 - Adicionada secao de estrutura de arquivos completa

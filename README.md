@@ -383,6 +383,14 @@ Os assets visuais podem ser regenerados usando os scripts na pasta `scripts/`:
 python scripts\gerar_assets.py
 ```
 
+> OBS: Existe uma versão alternativa que usa MoviePy para gerar animações com efeitos avançados.
+> Instale as dependências específicas e execute:
+
+```bash
+pip install -r requirements_moviepy.txt
+python scripts\gerar_assets_moviepy.py
+```
+
 **Gerar bandeiras:**
 
 ```bash
@@ -397,6 +405,14 @@ Gli asset visivi possono essere rigenerati usando gli script nella cartella `scr
 
 ```bash
 python scripts\gerar_assets.py
+```
+
+> NOTA: È disponibile una versione alternativa che utilizza MoviePy per generare animazioni con effetti avanzati.
+> Installa le dipendenze specifiche ed esegui:
+
+```bash
+pip install -r requirements_moviepy.txt
+python scripts\gerar_assets_moviepy.py
 ```
 
 **Generare bandiere:**

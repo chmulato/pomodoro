@@ -1,6 +1,6 @@
-# 🎬 Resultado: Animações MoviePy no Pomodoro Timer
+# Resultado: Animações MoviePy no Pomodoro Timer
 
-## ✅ O que foi implementado
+## O que foi implementado
 
 ### **1. Novas animações com MoviePy**
 
@@ -8,27 +8,27 @@ Foram criadas **4 animações** com qualidade cinematográfica:
 
 | Animação | Arquivo | Frames | Efeitos |
 |----------|---------|--------|---------|
-| **🍅 Trabalho** | `pomodoro.gif` | 30 | Pulsação suave + Rotação ±8° |
-| **☕ Pausa Curta** | `pomodoro_break.gif` | 37 | Movimento pendular ±15° |
-| **😴 Pausa Longa** | `pomodoro_longbreak.gif` | 34 | Respiração lenta + Z's flutuantes |
-| **✨ Especial** | `pomodoro_special.gif` | 60 | Zoom 0.8-1.4x + Rotação 360° |
+| Trabalho | `pomodoro.gif` | 30 | Pulsação suave + Rotação ±8° |
+| Pausa Curta | `pomodoro_break.gif` | 37 | Movimento pendular ±15° |
+| Pausa Longa | `pomodoro_longbreak.gif` | 34 | Respiração lenta + Z's flutuantes |
+| Especial | `pomodoro_special.gif` | 60 | Zoom 0.8-1.4x + Rotação 360° |
 
 ### **2. Melhorias na aplicação principal (`pomodoro.py`)**
 
-#### **Antes:**
+### Antes:
 
-- ❌ Usava apenas 1 animação estática
-- ❌ Sem variação visual entre estados
-- ❌ Frames gerados manualmente com PIL
+- Usava apenas 1 animação estática
+- Sem variação visual entre estados
+- Frames gerados manualmente com PIL
 
-#### **Depois:**
+#### Depois:
 
-- ✅ **3 animações dinâmicas** que alternam automaticamente
-- ✅ **Animação de trabalho** durante os 25 minutos de foco
-- ✅ **Animação de pausa curta** durante os 5 minutos de descanso
-- ✅ **Animação de pausa longa** após 4 pomodoros (30 minutos)
-- ✅ Transição automática entre animações
-- ✅ Efeitos suaves com easing functions
+- 3 animações dinâmicas que alternam automaticamente
+- Animação de trabalho durante os 25 minutos de foco
+- Animação de pausa curta durante os 5 minutos de descanso
+- Animação de pausa longa após 4 pomodoros (30 minutos)
+- Transição automática entre animações
+- Efeitos suaves com easing functions
 
 ### **3. Tecnologias usadas**
 
@@ -74,7 +74,7 @@ def switch_animation(self, animation_type="work"):
 - Ao completar pausa → `switch_animation("work")`
 - Ao resetar → Mantém animação apropriada ao estado
 
-## 🎨 Comparação Visual
+## Comparação Visual
 
 ### **Antes (PIL):**
 
@@ -95,7 +95,7 @@ t=0.0s → t=0.5s → t=1.0s → ... (baseado em tempo)
 - Efeitos compostos
 ```
 
-## 📊 Especificações Técnicas
+## Especificações Técnicas
 
 ### **Animação de Trabalho**
 
@@ -134,7 +134,7 @@ t=0.0s → t=0.5s → t=1.0s → ... (baseado em tempo)
 - Rotação: 360° (completa)
 - Brilho: Pulsante
 
-## 🚀 Como funciona na aplicação
+## Como funciona na aplicação
 
 ### **Ciclo normal:**
 
@@ -149,31 +149,31 @@ t=0.0s → t=0.5s → t=1.0s → ... (baseado em tempo)
 - **Tomate balançando** = Pausa curta, relaxe um pouco
 - **Tomate respirando com Z's** = Pausa longa, descanse bem!
 
-## 📁 Arquivos criados/modificados
+## Arquivos criados/modificados
 
-### **Novos arquivos:**
+### Novos arquivos:
 
-- ✅ `scripts/gerar_assets_moviepy.py` - Gerador com MoviePy
-- ✅ `scripts/visualizar_animacoes.py` - Visualizador comparativo
-- ✅ `scripts/README_MOVIEPY.md` - Documentação técnica
-- ✅ `requirements_moviepy.txt` - Dependências
-- ✅ `img/pomodoro.gif` - Animação de trabalho (MoviePy)
-- ✅ `img/pomodoro_break.gif` - Animação de pausa curta (MoviePy)
-- ✅ `img/pomodoro_longbreak.gif` - Animação de pausa longa (MoviePy)
-- ✅ `img/pomodoro_special.gif` - Animação especial (MoviePy)
+- `scripts/gerar_assets_moviepy.py` - Gerador com MoviePy
+- `scripts/visualizar_animacoes.py` - Visualizador comparativo
+- `scripts/README_MOVIEPY.md` - Documentação técnica
+- `requirements_moviepy.txt` - Dependências
+- `img/pomodoro.gif` - Animação de trabalho (MoviePy)
+- `img/pomodoro_break.gif` - Animação de pausa curta (MoviePy)
+- `img/pomodoro_longbreak.gif` - Animação de pausa longa (MoviePy)
+- `img/pomodoro_special.gif` - Animação especial (MoviePy)
 
-### **Modificados:**
+### Modificados:
 
-- ✅ `pomodoro.py` - Sistema de múltiplas animações
+- `pomodoro.py` - Sistema de múltiplas animações
 
-## 🎯 Resultado Final
+## Resultado Final
 
 A aplicação agora oferece uma **experiência visual muito mais rica e profissional**, com:
 
-✨ **Animações fluidas e naturais**
-✨ **Feedback visual claro do estado**
-✨ **Efeitos cinematográficos**
-✨ **Transições automáticas**
-✨ **Qualidade superior aos GIFs comuns**
+- Animações fluidas e naturais
+- Feedback visual claro do estado
+- Efeitos cinematográficos
+- Transições automáticas
+- Qualidade superior aos GIFs comuns
 
-Os usuários agora podem **sentir visualmente** a diferença entre trabalho, pausa curta e pausa longa através das animações únicas de cada estado! 🍅🎬
+Os usuários agora podem identificar visualmente a diferença entre trabalho, pausa curta e pausa longa através das animações únicas de cada estado.
