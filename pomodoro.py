@@ -63,9 +63,12 @@ class PomodoroTimer:
         except:
             pass
         
-        # Carrega animação do tomate
-        self.frames = []
-        self.load_gif_animation()
+        # Carrega animações do tomate
+        self.work_frames = []
+        self.break_frames = []
+        self.longbreak_frames = []
+        self.frames = []  # frames atuais
+        self.load_gif_animations()
         
         # Interface
         self.setup_ui()
@@ -82,18 +85,59 @@ class PomodoroTimer:
         self.root.bind('<r>', lambda e: self.reset_timer())
         self.root.bind('<Escape>', lambda e: self.root.quit())
     
-    def load_gif_animation(self):
-        """Carrega frames do GIF animado"""
+    def load_gif_animations(self):
+        """Carrega frames de todos os GIFs animados"""
+        # GIF de trabalho
         try:
             gif = Image.open("img/pomodoro.gif")
             for frame in range(0, getattr(gif, "n_frames", 1)):
                 gif.seek(frame)
                 frame_image = gif.copy().resize((150, 150), Image.Resampling.LANCZOS)
                 photo = ImageTk.PhotoImage(frame_image)
-                self.frames.append(photo)
+                self.work_frames.append(photo)
+            print("✓ pomodoro.gif carregado")
         except Exception as e:
             print(f"Erro ao carregar img/pomodoro.gif: {e}")
-            self.frames = []
+        
+        # GIF de pausa curta
+        try:
+            gif = Image.open("img/pomodoro_break.gif")
+            for frame in range(0, getattr(gif, "n_frames", 1)):
+                gif.seek(frame)
+                frame_image = gif.copy().resize((150, 150), Image.Resampling.LANCZOS)
+                photo = ImageTk.PhotoImage(frame_image)
+                self.break_frames.append(photo)
+            print("✓ pomodoro_break.gif carregado")
+        except Exception as e:
+            print(f"Erro ao carregar img/pomodoro_break.gif: {e}")
+        
+        # GIF de pausa longa
+        try:
+            gif = Image.open("img/pomodoro_longbreak.gif")
+            for frame in range(0, getattr(gif, "n_frames", 1)):
+                gif.seek(frame)
+                frame_image = gif.copy().resize((150, 150), Image.Resampling.LANCZOS)
+                photo = ImageTk.PhotoImage(frame_image)
+                self.longbreak_frames.append(photo)
+            print("✓ pomodoro_longbreak.gif carregado")
+        except Exception as e:
+            print(f"Erro ao carregar img/pomodoro_longbreak.gif: {e}")
+        
+        # Inicia com frames de trabalho
+        self.frames = self.work_frames if self.work_frames else []
+    
+    def switch_animation(self, animation_type="work"):
+        """Alterna entre as animações conforme o estado"""
+        if animation_type == "work" and self.work_frames:
+            self.frames = self.work_frames
+            print("🍅 Animação: Trabalho")
+        elif animation_type == "short_break" and self.break_frames:
+            self.frames = self.break_frames
+            print("☕ Animação: Pausa Curta")
+        elif animation_type == "long_break" and self.longbreak_frames:
+            self.frames = self.longbreak_frames
+            print("😴 Animação: Pausa Longa")
+        self.current_frame = 0
     
     def setup_ui(self):
         """Configura a interface gráfica"""
@@ -251,11 +295,14 @@ class PomodoroTimer:
         
         if self.is_work_time:
             self.time_left = self.WORK_TIME
+            self.switch_animation("work")
         else:
             if self.pomodoro_count >= 4:
                 self.time_left = self.LONG_BREAK
+                self.switch_animation("long_break")
             else:
                 self.time_left = self.SHORT_BREAK
+                self.switch_animation("short_break")
         
         self.update_display()
         
@@ -300,6 +347,7 @@ class PomodoroTimer:
             # Determina o tipo de pausa
             if self.pomodoro_count >= 4:
                 self.time_left = self.LONG_BREAK
+                self.switch_animation("long_break")  # Troca para animação de pausa longa
                 self.show_notification(
                     "Pausa Longa! / Pausa Lunga!",
                     "Você completou 4 pomodoros!\nDescanse por 30 minutos.\n\n"
@@ -309,6 +357,7 @@ class PomodoroTimer:
                 self.pomodoro_count = 0
             else:
                 self.time_left = self.SHORT_BREAK
+                self.switch_animation("short_break")  # Troca para animação de pausa curta
                 self.show_notification(
                     "Pausa Curta! / Pausa Breve!",
                     f"Descanse por 5 minutos.\nPomodoros: {self.pomodoro_count}/4\n\n"
@@ -321,6 +370,7 @@ class PomodoroTimer:
         else:
             # Completou uma pausa
             self.time_left = self.WORK_TIME
+            self.switch_animation("work")  # Troca para animação de trabalho
             self.show_notification(
                 "De Volta ao Trabalho! / Torna al Lavoro!",
                 "Hora de focar!\nNovo pomodoro de 25 minutos.\n\n"

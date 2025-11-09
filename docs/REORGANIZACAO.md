@@ -14,7 +14,7 @@ Il progetto Pomodoro Timer e stato riorganizzato per migliorare la struttura del
 
 ## Estrutura Antiga / Struttura Precedente
 
-```
+```text
 workspace_pomodoro/
 ├── pomodoro.py
 ├── pomodoro_test.py
@@ -41,7 +41,7 @@ workspace_pomodoro/
 
 ## Estrutura Nova / Nuova Struttura
 
-```
+```text
 workspace_pomodoro/
 ├── pomodoro.py              (raiz / radice)
 ├── requirements.txt
