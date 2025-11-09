@@ -1,24 +1,30 @@
-# Pomodoro Timer / Cronômetro Pomodoro
+# 🍅 Pomodoro Timer / Cronômetro Pomodoro
 
-Aplicativo de gerenciamento de tempo baseado na Técnica Pomodoro.
+🇧🇷 **Português** | 🇮🇹 **Italiano**
+
+Aplicativo de gerenciamento de tempo baseado na Técnica Pomodoro.  
+Applicazione per la gestione del tempo basata sulla Tecnica Pomodoro.
 
 ![Tela Inicial](img/tela_inicial.png)
 
 ---
 
-## Descrição / Descrizione
+## 📖 Descrição / Descrizione
 
-**Português:**  
+### 🇧🇷 Português
+
 O Pomodoro Timer é uma ferramenta para aumentar a produtividade através da Técnica Pomodoro. O método consiste em trabalhar por 25 minutos (um "pomodoro"), seguido de 5 minutos de descanso. Após completar 4 pomodoros, o usuário ganha um descanso maior de 30 minutos. O aplicativo possui interface gráfica intuitiva com animação de tomate e sistema de notificações sonoras.
 
-**Italiano:**  
+### 🇮🇹 Italiano
+
 Il Pomodoro Timer è uno strumento per aumentare la produttività attraverso la Tecnica Pomodoro. Il metodo consiste nel lavorare per 25 minuti (un "pomodoro"), seguito da 5 minuti di pausa. Dopo aver completato 4 pomodori, l'utente ottiene una pausa più lunga di 30 minuti. L'applicazione ha un'interfaccia grafica intuitiva con animazione di pomodoro e sistema di notifiche sonore.
 
 ---
 
-## Funcionalidades / Funzionalità
+## ✨ Funcionalidades / Funzionalità
 
-**Português:**
+### 🇧🇷 Português
+
 - Ciclos de trabalho de 25 minutos (Pomodoro)
 - Pausas curtas de 5 minutos
 - Pausa longa de 30 minutos após 4 pomodoros
@@ -29,7 +35,8 @@ Il Pomodoro Timer è uno strumento per aumentare la produttività attraverso la 
 - Ícone personalizado do tomate
 - Compilação para executável Windows
 
-**Italiano:**
+### 🇮🇹 Italiano
+
 - Cicli di lavoro di 25 minuti (Pomodoro)
 - Pause brevi di 5 minuti
 - Pausa lunga di 30 minuti dopo 4 pomodori
